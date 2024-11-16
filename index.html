@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YVNGSQUAD</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Top bar with YVNGSQUAD text and buttons */
+        .top-bar {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        /* YVNGSQUAD text */
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* Button styles */
+        .top-right-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .top-right-buttons button {
+            padding: 8px;
+            font-size: 0.9em;
+            color: #4b0101;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .top-right-buttons button:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Hidden button styles */
+        .hidden-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            color: #fff;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0; /* Invisible by default */
+            transition: opacity 0.3s ease;
+        }
+
+        .hidden-button:hover {
+            opacity: 1; /* Becomes visible on hover */
+            border-color: #fff;
+            background-color: rgba(255, 0, 0, 0.8); /* Slightly visible red background */
+        }
+
+        /* Main content styles */
+        .welcome-section {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .read-out-loud {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 1em;
+            color: #4b0101;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .read-out-loud:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+    <script>
+        // Functions for each button's action
+        function openPrivacyPolicy() {
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Rickroll link
+        }
+
+        function openSocials() {
+            alert("I'm too lazy to add this lol");
+        }
+
+        function openCredits() {
+            alert("Credits: alzrvr, yvngcj, ChatGPT, W3Schools");
+        }
+
+        // Function to "read out loud"
+        function readOutLoud() {
+            const utterance = new SpeechSynthesisUtterance("watch your back at all times");
+            utterance.pitch = 0; // Lower the pitch
+            utterance.rate = 1;  // Slightly slower for whispering effect
+            utterance.volume = 0.1; // Reduce volume for a softer sound
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Top bar with YVNGSQUAD text and buttons -->
+    <div class="top-bar">
+        <div class="logo">YVNGSQUAD</div>
+        <div class="top-right-buttons">
+            <button onclick="openPrivacyPolicy()">Privacy Policy</button>
+            <button onclick="openSocials()">Socials</button>
+            <button onclick="openCredits()">Credits</button>
+        </div>
+    </div>
+
+    <!-- Main welcome message -->
+    <div class="welcome-section">
+        <p>Hey! Welcome To The Long Awaited YVNGSQUAD Website! This Was All Made In Visual Studio Code And Help With ChatGPT 😭😭 BTW, MERCH IS HERE BUT you gotta find it 😔🙏 MORE UPDATES COMING SOON!!!!!</p>
+        <button class="read-out-loud" onclick="readOutLoud()">read</button>
+    </div>
+
+    <!-- Hidden button -->
+    <button class="hidden-button" onclick="window.location.href='jumpscare.html'">(don't enter)</button>
+
+</body>
+</html>

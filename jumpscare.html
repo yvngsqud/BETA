@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONT BLINK</title>
+    <style>
+        /* Resetting default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fullscreen setup for the body */
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: black; /* Fallback background in case the video doesn't load */
+        }
+
+        /* Styling the video to fit the screen */
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures video fills the screen without distortion */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted >
+        <source src="images/DONT MOVE.mp4" type="video/mp4">
+        <!-- Fallback message for unsupported browsers -->
+        haha no video for u monkey na na na na na 🗣️🔥
+    </video>
+</body>
+</html>
